@@ -1,9 +1,9 @@
 import InterfaceProfile from './InterfaseProfile'
 
-export default function CreatedProfile({ id, fistName, lastName, age, phone, country, city, estates, techs, image = '' }: InterfaceProfile) {
+export default function CreatedProfile({ id, firstName, lastName, age, phone, country, city, estates, techs, image = '', stars = 0 }: InterfaceProfile) {
   const profile = {
     id,
-    fistName,
+    firstName,
     lastName,
     age,
     phone,
@@ -11,7 +11,8 @@ export default function CreatedProfile({ id, fistName, lastName, age, phone, cou
     city,
     estates,
     techs,
-    image
+    image,
+    stars
   }
   return profile
 }

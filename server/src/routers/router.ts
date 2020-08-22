@@ -22,11 +22,11 @@ router.post("/profileImage/:id", multer(multerConfig).single('file'), (request, 
 })
 
 router.post("/profile", (request, response) => {
-  const { fistName, lastName, age, phone, country, city, estates, techs } = request.body
+  const { firstName, lastName, age, phone, country, city, estates, techs, stars } = request.body
 
   const newProfile = CreatedProfile({
     id: v4(),
-    fistName,
+    firstName,
     lastName,
     age,
     phone,
@@ -34,6 +34,7 @@ router.post("/profile", (request, response) => {
     country,
     estates,
     techs,
+    stars: 0
   })
   response.json(newProfile)
   usersProfile.push(newProfile)

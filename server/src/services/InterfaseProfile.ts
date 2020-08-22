@@ -1,6 +1,6 @@
 export default interface InterfaceProfile {
   id: string;
-  fistName: string;
+  firstName: string;
   lastName: string;
   age: number;
   phone: number;
@@ -8,5 +8,6 @@ export default interface InterfaceProfile {
   city: string;
   estates: string;
   techs: string[];
-  image?: string
+  image?: string;
+  stars: number;
 }
